@@ -10,6 +10,7 @@ on:
     branches:
       - "2.0"
       - "main"
+      - "test-actor"
     # Publish semver tags as releases.
     tags: [ 'v*.*.*' ]
 
@@ -30,6 +31,5 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v2
         run: | 
           echo github.actor = ${{ github.actor }}
